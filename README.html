@@ -1,1 +1,48 @@
-# descriminant calculator
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discriminant Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Discriminant Calculator</h2>
+    <label for="a">Enter value for a:</label>
+    <input type="number" id="a">
+    <br>
+
+    <label for="b">Enter value for b:</label>
+    <input type="number" id="b">
+    <br>
+
+    <button onclick="calculate()">Calculate</button>
+    <p id="discriminant"></p>
+
+    <script>
+        function calculate() {
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("discriminant").innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            let discriminant = (b ** 2) - (4 * a * b);
+            document.getElementById("discriminant").innerText = "Discriminant: " + discriminant;
+        }
+    </script>
+</body>
+</html>
