@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background: linear-gradient(to bottom, #f0f8ff, #dbe9fa);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input, button {
+    margin: 10px;
+    padding: 8px;
+    font-size: 16px;
+    position: relative; /* Ensures inputs and buttons stay on top of background */
+    z-index: 1; /* Higher z-index so they remain clickable */
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}

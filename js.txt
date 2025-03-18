@@ -1,0 +1,16 @@
+  function calculate() {
+      let a = parseFloat(document.getElementById("a").value);
+      let b = parseFloat(document.getElementById("b").value);
+
+      console.log("a:", a, "b:", b); // Debugging output
+
+      if (isNaN(a) || isNaN(b)) {
+          document.getElementById("discriminant").innerText = "Please enter valid numbers.";
+          return;
+      }
+
+      let discriminant = (b ** 2) - (4 * a * b);
+      console.log("Discriminant:", discriminant); // Debugging output
+
+      document.getElementById("discriminant").innerText = "Discriminant: " + discriminant;
+  }
