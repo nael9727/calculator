@@ -1,1 +1,1 @@
-# calculator
+# descriminant calculator
